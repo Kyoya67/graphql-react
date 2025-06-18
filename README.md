@@ -88,7 +88,7 @@ npx prisma migrate dev
 
 ```bash
 cd graphql-server
-npm run dev
+npm run start
 ```
 
 → GraphQLサーバーが `http://localhost:4000` で起動
@@ -102,30 +102,12 @@ npm run dev
 
 → Reactアプリが `http://localhost:5173` で起動
 
-## 📋 GraphQL API
-
-### Queries
-
-- `getTodos` - 全てのTodoを取得
-
-### Mutations
-
-- `addTodo(title: String!)` - 新しいTodoを追加
-- `updateTodo(id: ID!, completed: Boolean!)` - Todoの完了状態を更新
-- `deleteTodo(id: ID!)` - Todoを削除
-
-## 🎨 UIデザイン
-
-- モダンでクリーンなデザイン
-- グラデーション背景とシャドウ効果
-- スムーズなアニメーション
-- レスポンシブレイアウト
-- 直感的なユーザーインターフェース
-
 ## 📝 動画との差分
 
 - **Tailwind CSS**: 3系 → 4系にアップグレード
 - **Delete機能**: 動画にはない独自追加機能
+    <img width="457" alt="スクリーンショット 2025-06-18 13 09 44" src="https://github.com/user-attachments/assets/ca276688-6908-4e2c-b01d-2984fb015586" />
+
 - **UIの改善**: より洗練されたデザインとアニメーション
 
 ## 🤝 コントリビューション
