@@ -9,6 +9,9 @@ GraphQL、React、Prismaを使用したモダンなTodoアプリケーション�
 ## 📝 動画との差分
 
 - **Tailwind CSS**: 3系 → 4系にアップグレード
+
+  [こちらのzennの記事](https://zenn.dev/kyoya08/articles/4e3a8425d1b421)に4系にしたときの注意点をまとめました！
+  
 - **Delete機能**: 動画にはない独自追加機能
   
   <img width="457" alt="スクリーンショット 2025-06-18 13 09 44" src="https://github.com/user-attachments/assets/ca276688-6908-4e2c-b01d-2984fb015586" />
