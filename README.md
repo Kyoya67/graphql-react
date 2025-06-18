@@ -63,7 +63,7 @@ GraphQL、React、Prismaを使用したモダンなTodoアプリケーション�
 1. リポジトリをクローン
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Kyoya67/graphql-react.git
 cd graphql-react
 ```
 
