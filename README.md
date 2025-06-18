@@ -6,6 +6,12 @@ GraphQL、React、Prismaを使用したモダンなTodoアプリケーション�
 
 このプロジェクトは[こちらのYouTube動画](https://www.youtube.com/watch?v=PzBsTUZo12s)を参考にして作成しました
 
+## 📝 動画との差分
+
+- **Tailwind CSS**: 3系 → 4系にアップグレード
+- **Delete機能**: 動画にはない独自追加機能
+  <img width="457" alt="スクリーンショット 2025-06-18 13 09 44" src="https://github.com/user-attachments/assets/ca276688-6908-4e2c-b01d-2984fb015586" />
+
 ## ✨ 機能
 
 - ✅ タスクの追加
@@ -101,19 +107,3 @@ npm run dev
 ```
 
 → Reactアプリが `http://localhost:5173` で起動
-
-## 📝 動画との差分
-
-- **Tailwind CSS**: 3系 → 4系にアップグレード
-- **Delete機能**: 動画にはない独自追加機能
-    <img width="457" alt="スクリーンショット 2025-06-18 13 09 44" src="https://github.com/user-attachments/assets/ca276688-6908-4e2c-b01d-2984fb015586" />
-
-- **UIの改善**: より洗練されたデザインとアニメーション
-
-## 🤝 コントリビューション
-
-プルリクエストやイシューの報告を歓迎します！
-
-## �� ライセンス
-
-MIT License
