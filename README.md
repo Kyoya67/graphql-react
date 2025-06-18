@@ -4,8 +4,7 @@ GraphQL、React、Prismaを使用したモダンなTodoアプリケーション�
 
 ## 📺 参考動画
 
-このプロジェクトは以下のYouTube動画を参考にして作成しました：
-[https://www.youtube.com/watch?v=PzBsTUZo12s](https://www.youtube.com/watch?v=PzBsTUZo12s)
+このプロジェクトは[こちらのYouTube動画](https://www.youtube.com/watch?v=PzBsTUZo12s)を参考にして作成しました
 
 ## ✨ 機能
 
