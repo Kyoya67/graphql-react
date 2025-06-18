@@ -1,7 +1,7 @@
 import { gql, useMutation, useQuery } from "@apollo/client";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { CheckCircle2, PlusCircle } from "lucide-react";
+import { CheckCircle2, PlusCircle, Trash2 } from "lucide-react";
 import { Button } from "./components/ui/button";
 import { Checkbox } from "./components/ui/checkbox";
 
@@ -35,6 +35,14 @@ const UPDATE_TODO = gql`
   }
 `;
 
+const DELETE_TODO = gql`
+  mutation deleteTodo($id: ID!) {
+    deleteTodo(id: $id) {
+      id
+    }
+  }
+`;
+
 type Todo = {
   id: string;
   title: string;
@@ -49,6 +57,7 @@ function App() {
   const todos = data ? data.getTodos : [];
   const [addTodo] = useMutation(ADD_TODO);
   const [updateTodo] = useMutation(UPDATE_TODO);
+  const [deleteTodo] = useMutation(DELETE_TODO);
   const [title, setTitle] = useState("");
 
   if (loading) return <p>Loading...</p>;
@@ -64,6 +73,13 @@ function App() {
   const handleUpdateTodo = async (id: string, completed: boolean) => {
     await updateTodo({
       variables: { id, completed: !completed },
+      refetchQueries: [{ query: GET_TODOS }],
+    });
+  };
+
+  const handleDeleteTodo = async (id: string) => {
+    await deleteTodo({
+      variables: { id },
       refetchQueries: [{ query: GET_TODOS }],
     });
   };
@@ -118,15 +134,25 @@ function App() {
                   <label
                     htmlFor={`todo-${todo.id}`}
                     className={`flex-grow text-lg ${todo.completed
-                        ? "line-through text-teal-600"
-                        : "text-gray-800"
+                      ? "line-through text-teal-600"
+                      : "text-gray-800"
                       }`}
                   >
                     {todo.title}
                   </label>
-                  {todo.completed && (
-                    <CheckCircle2 className="w-5 h-5 text-teal-500 ml-2" />
-                  )}
+                  <div className="flex items-center gap-2">
+                    {todo.completed && (
+                      <CheckCircle2 className="w-5 h-5 text-teal-500" />
+                    )}
+                    <Button
+                      onClick={() => handleDeleteTodo(todo.id)}
+                      variant="outline"
+                      size="sm"
+                      className="border-red-200 text-red-500 hover:bg-red-50 hover:border-red-300"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </Button>
+                  </div>
                 </motion.div>
               ))}
             </AnimatePresence>
